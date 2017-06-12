@@ -18,4 +18,43 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('ROUTE_TEXT', 'NAMECONTROLLER@METODO');
+Route::get('/eliminar/usuario/{idUsuario}', 'HomeController@destroy');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

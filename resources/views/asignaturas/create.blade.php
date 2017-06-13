@@ -9,10 +9,27 @@
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="/asignaturas/create">
                         {{ csrf_field() }}
+                        
+                        <input type="hidden" name="user_id" value="{{ Auth::user->id }}">
+                        
                         <div class="form-group">
                             <label for="name" class="col-md-4 control-label">Nombre</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="seccion" autofocus required>
+                                <input type="text" class="form-control" name="nombre" autofocus required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">Nivel</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="nivel" autofocus required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name" class="col-md-4 control-label">Descripcion</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="descrpcion" autofocus required>
                             </div>
                         </div>
                         

@@ -39,7 +39,7 @@ class AsignaturaController extends Controller
         $asignatura->descripcion = $request->descripcion;
         $asignatura->save();
         
-        return->redirect('asignaturas_list'); 
+        return redirect()->route('asignaturas_list'); 
     }
 
     public function update(Request $request, $id)
@@ -51,7 +51,7 @@ class AsignaturaController extends Controller
       $asignatura->descripcion = $request->descripcion;
       $asignatura->save(); 
       
-      return->redirect('asignaturas_list');
+      return redirect()->route('asignaturas_list'); 
     }
 
     public function destroy($id)
@@ -59,6 +59,6 @@ class AsignaturaController extends Controller
         $asignatura = Asignatura::findOrFail($id);
         $asignatura->delete();
         
-        return->redirect('asignaturas_list');
+        return redirect()->route('asignaturas_list'); 
     }
 }

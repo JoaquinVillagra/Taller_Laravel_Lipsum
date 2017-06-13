@@ -19,6 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/eliminar/usuario/{idUsuario}', 'HomeController@destroy');
+Route::get('/asignaturas', 'AsignaturasController@index')->name('asignaturas_list');
+
+Route::get('/asignaturas/{id}', 'AsignaturasController@show');
+
+Route::post('/asignaturas/create', 'AsignaturasController@store');
+
+Route::post('/asignaturas/{id}', 'AsignaturasController@update');
+
+Route::get('/asignaturas/eliminar/{id}', 'AsignaturasController@delete');
+
 
 
 
